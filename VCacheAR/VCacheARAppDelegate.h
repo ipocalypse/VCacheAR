@@ -6,10 +6,12 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class VCacheARSecondViewController;
 
-@interface VCacheARAppDelegate : UIResponder <UIApplicationDelegate>
+@interface VCacheARAppDelegate : NSObject <UIApplicationDelegate> 
 
-@property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) VCacheARSecondViewController *viewController;
 
 @end

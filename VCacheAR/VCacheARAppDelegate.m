@@ -7,14 +7,17 @@
 //
 
 #import "VCacheARAppDelegate.h"
+#import "VCacheARSecondViewController.h"
 
 @implementation VCacheARAppDelegate
-
 @synthesize window = _window;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //[application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
     // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

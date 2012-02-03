@@ -41,6 +41,7 @@
 		866CC9C114DB665200C02C2E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC9C014DB665200C02C2E /* MapKit.framework */; };
 		866CC9C314DB666100C02C2E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC9C214DB666100C02C2E /* OpenGLES.framework */; };
 		866CC9C514DB666E00C02C2E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC9C414DB666E00C02C2E /* QuartzCore.framework */; };
+		866CC9CB14DBA6CA00C02C2E /* refresh_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CC9CA14DBA6CA00C02C2E /* refresh_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		866CC9C014DB665200C02C2E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		866CC9C214DB666100C02C2E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		866CC9C414DB666E00C02C2E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		866CC9CA14DBA6CA00C02C2E /* refresh_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		866CC96914DB444000C02C2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				866CC9CA14DBA6CA00C02C2E /* refresh_button.png */,
 				866CC96A14DB444000C02C2E /* VCacheAR-Info.plist */,
 				866CC96B14DB444000C02C2E /* InfoPlist.strings */,
 				866CC96E14DB444000C02C2E /* main.m */,
@@ -289,6 +292,7 @@
 				866CC9B414DB65D200C02C2E /* star.obj in Resources */,
 				866CC9B514DB65D200C02C2E /* ufo.obj in Resources */,
 				866CC9B714DB65D200C02C2E /* SM3DAR_keys.txt in Resources */,
+				866CC9CB14DBA6CA00C02C2E /* refresh_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +396,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,6 +420,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
