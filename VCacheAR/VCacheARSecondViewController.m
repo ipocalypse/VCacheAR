@@ -62,11 +62,12 @@
 
 - (void)viewDidLoad
 {
+    self.mapView = [[[SM3DARMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease]; 
+    mapView.delegate = self;
+    mapView.showsUserLocation = YES;
+    [self.view addSubview:mapView];   
+    [mapView init3DAR];
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
-    
-    [self.view setFrame:[UIScreen mainScreen].bounds];
-    [mapView.sm3dar setFrame:self.view.bounds];
     dispatch_async(IpocQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL: IpocURL];
         [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];

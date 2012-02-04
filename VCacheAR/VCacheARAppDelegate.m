@@ -15,9 +15,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //[application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+    [application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+    [application setStatusBarHidden:YES animated:NO];
     // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
     return YES;
 }
 							
