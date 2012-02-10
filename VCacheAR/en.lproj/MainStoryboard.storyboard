@@ -254,7 +254,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="qcn-gM-poZ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="3dar_logo.png" id="qcn-gM-poZ"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="401" y="576"/>
@@ -280,6 +280,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="3dar_logo.png" width="57" height="57"/>
         <image name="BG2.png" width="640" height="960"/>
         <image name="bubble.png" width="280" height="280"/>
         <image name="first.png" width="30" height="30"/>
