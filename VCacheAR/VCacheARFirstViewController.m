@@ -27,7 +27,7 @@
 @synthesize matureContentButton;
 
 //Method for saving the name.
-/*-(void)saveString:(NSString*)myString
+-(void)saveString:(NSString*)myString
 
 {
     
@@ -35,7 +35,6 @@
     [[NSUserDefaults standardUserDefaults]
      setObject:myString forKey:@"String"];
 }
-*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -146,7 +145,6 @@
     playerNameButton.hidden = NO;
     labelGeoText.hidden = YES;
     
-    NSLog(@"Testing");
     
 }
 
@@ -185,6 +183,7 @@
     
     labelPlayerName.text = playerNameTextField.text;
     [playerNameTextField resignFirstResponder];
+    [self saveString:playerNameTextField.text];
 }
 
 - (IBAction)informationButton:(id)sender {

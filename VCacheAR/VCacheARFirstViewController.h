@@ -18,7 +18,6 @@
 
 
 
-
 //hidden first:
 @property (retain, nonatomic) IBOutlet UILabel *matureContentLabel;
 @property (retain, nonatomic) IBOutlet UISwitch *matureContentSwitch;

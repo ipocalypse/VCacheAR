@@ -21,6 +21,8 @@
 @end
 
 @implementation NSDictionary(JSONCategories)
+
+
 +(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString*)urlAddress
 {
     NSData* data = [NSData dataWithContentsOfURL: [NSURL URLWithString: urlAddress] ];
@@ -30,13 +32,7 @@
     return result;
 }
 
-//retrieves the player name from the first view controller.
-/*-(NSString*)retrieveString
-{
-    NSString* recoveredString = [[NSUserDefaults standardUserDefaults] objectForKey:@"String"];
-    return recoveredString;
-}
-*/
+
 
 -(NSData*)toJSON
 {
@@ -51,6 +47,19 @@
 //@synthesize playerNameLabel;
 @synthesize mapView;
 @synthesize locationManager;
+
+
+
+
+//retrieves the player name from the first view controller.
+-(NSString*)retrieveString
+{
+    NSString* recoveredString = [[NSUserDefaults standardUserDefaults] objectForKey:@"String"];
+    return recoveredString;
+}
+
+
+
 
 - (void)dealloc 
 {    
@@ -78,8 +87,7 @@
 - (void)viewDidLoad
 {
     
-    //playerNameLabel.text = [self retrieveString];
-    
+      
     
     self.mapView = [[[SM3DARMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease]; 
     mapView.delegate = self;
@@ -94,16 +102,19 @@
     
     [NSThread detachNewThreadSelector:@selector(UploadUserLocation:) toTarget:self withObject:nil];
     
+    //initializes timer
+    
+    
+    //timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(UploadUserLocation:) userInfo:nil repeats:YES];
 
 }
 
 -(void) UploadUserLocation:(id)anObject {
     
     
-    NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+   // NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
     
     for (int i=0; i<1000000; i++){
-        
         // Upload UID, LAT, and LONG to server
         locationManager = [[CLLocationManager alloc] init];
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -116,7 +127,10 @@
         
         NSString *Latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
         NSString *Longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
-        NSString *Name = [NSString stringWithFormat:@"DORK"];
+        //NSString *Name = [NSString stringWithFormat:@"DORK"];
+        NSString *Name = [self retrieveString];
+       // NSLog(@"%@",Name);
+   // NSLog(@"Testing timer");
         NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
         NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Name=%@&Latitude=%@&Longitude=%@", Uid, Name, Latitude, Longitude];
         [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
@@ -126,7 +140,7 @@
     
     //we need to do this to prevent memory leaks
     
-    [autoreleasepool release];
+   // [autoreleasepool release];
     
 }
 
@@ -186,7 +200,7 @@
 - (void)viewDidUnload
 {
   //  [self setPlayerNameLabel:nil];
-   // [self setPlayerNameLabel:nil];
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

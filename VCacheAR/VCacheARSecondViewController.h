@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 
-@interface VCacheARSecondViewController : UIViewController <MKMapViewDelegate, SM3DARDelegate, CLLocationManagerDelegate> 
+@interface VCacheARSecondViewController : UIViewController <MKMapViewDelegate, SM3DARDelegate, CLLocationManagerDelegate>
 {
 	SystemSoundID focusSound;
     BOOL sm3darInitialized;
@@ -22,7 +22,13 @@
     CLLocationAccuracy desiredLocationAccuracy;
     NSInteger desiredLocationAccuracyAttempts;
     BOOL acceptableLocationAccuracyAchieved;
+    NSTimer *timer;
+
 }
+
+
+
+
 
 @property (nonatomic, retain) IBOutlet SM3DARMapView *mapView;
 @property (nonatomic, retain) CLLocationManager *locationManager;

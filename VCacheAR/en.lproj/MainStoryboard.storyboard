@@ -77,9 +77,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uTz-CC-2xh">
-                                <rect key="frame" x="7" y="233" width="173" height="32"/>
+                                <rect key="frame" x="101" y="237" width="118" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
                                 <state key="normal" title="Change Player Name" backgroundImage="button1.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,39 +234,6 @@
         <image name="refresh_button.png" width="52" height="52"/>
         <image name="second.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="SM3DARMapView" superclassName="MKMapView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SM3DARMapView.h"/>
-        </class>
-        <class className="VCacheARFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VCacheARFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="optionsMenu:"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="enterNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="informationButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="labelGeoText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelPlayerName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelRemainingMessages" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="matureContentButton" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="matureContentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="matureContentSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="menuButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="nameConfirmButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="optionsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playerNameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playerNameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="VCacheARSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VCacheARSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshButtonTapped"/>
-                <relationship kind="outlet" name="mapView" candidateClass="SM3DARMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
