@@ -27,7 +27,8 @@
 @synthesize matureContentButton;
 
 //Method for saving the name.
--(void)saveString:(NSString*)myString
+
+/*-(void)saveString:(NSString*)myString
 
 {
     
@@ -35,7 +36,7 @@
     [[NSUserDefaults standardUserDefaults]
      setObject:myString forKey:@"String"];
 }
-
+*/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

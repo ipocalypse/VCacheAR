@@ -10,4 +10,11 @@
 
 @interface VCacheARThirdViewController : UIViewController
 
+
+@property (retain, nonatomic) IBOutlet UITextField *textFieldEnterName;
+
+- (IBAction)buttonNameSubmit:(id)sender;
+
+
+
 @end

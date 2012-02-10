@@ -9,6 +9,17 @@
 #import "VCacheARThirdViewController.h"
 
 @implementation VCacheARThirdViewController
+@synthesize textFieldEnterName;
+
+-(void)saveString:(NSString*)myString
+
+{
+    
+    
+    [[NSUserDefaults standardUserDefaults]
+     setObject:myString forKey:@"String"];
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +57,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTextFieldEnterName:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -56,5 +68,20 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (void)dealloc {
+    [textFieldEnterName release];
+    [super dealloc];
+}
+- (IBAction)buttonNameSubmit:(id)sender {
+
+    [textFieldEnterName resignFirstResponder];
+    [self saveString:textFieldEnterName.text];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Name confirmation" message:@"Once you have entered your name, it cannot be changed.  Are you sure you want X to be your name?" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"No", nil];
+                        
+                        [alert show];
+
+}
+
 
 @end
