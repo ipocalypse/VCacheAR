@@ -10,6 +10,11 @@
 #import <MapKit/MapKit.h>
 #import "VCacheARSecondViewController.h"
 
+
+
+
+
+
 @interface NSDictionary(JSONCategories)
 +(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString*)urlAddress;
 -(NSData*)toJSON;
@@ -25,6 +30,14 @@
     return result;
 }
 
+//retrieves the player name from the first view controller.
+/*-(NSString*)retrieveString
+{
+    NSString* recoveredString = [[NSUserDefaults standardUserDefaults] objectForKey:@"String"];
+    return recoveredString;
+}
+*/
+
 -(NSData*)toJSON
 {
     NSError* error = nil;
@@ -35,6 +48,7 @@
 @end
 
 @implementation VCacheARSecondViewController
+//@synthesize playerNameLabel;
 @synthesize mapView;
 @synthesize locationManager;
 
@@ -43,6 +57,7 @@
     [mapView release];
     mapView = nil;
 
+    //[playerNameLabel release];
 	[super dealloc];
 }
 
@@ -62,6 +77,10 @@
 
 - (void)viewDidLoad
 {
+    
+    //playerNameLabel.text = [self retrieveString];
+    
+    
     self.mapView = [[[SM3DARMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease]; 
     mapView.delegate = self;
     mapView.showsUserLocation = YES;
@@ -74,6 +93,8 @@
     });
     
     [NSThread detachNewThreadSelector:@selector(UploadUserLocation:) toTarget:self withObject:nil];
+    
+
 }
 
 -(void) UploadUserLocation:(id)anObject {
@@ -163,6 +184,8 @@
 
 - (void)viewDidUnload
 {
+  //  [self setPlayerNameLabel:nil];
+   // [self setPlayerNameLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

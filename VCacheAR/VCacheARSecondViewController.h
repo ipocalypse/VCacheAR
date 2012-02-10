@@ -28,4 +28,7 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 - (IBAction) refreshButtonTapped;
 
+
+//@property (retain, nonatomic) IBOutlet UILabel *playerNameLabel;
+
 @end
