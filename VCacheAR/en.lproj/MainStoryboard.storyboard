@@ -147,7 +147,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="First" image="first.png" id="7"/>
                     <navigationItem key="navigationItem" id="1db-5a-s72"/>
                     <connections>
                         <outlet property="enterNameLabel" destination="xX5-dQ-WgQ" id="9Jb-yR-KuI"/>
@@ -202,7 +202,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Second" image="second.png" id="6"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
@@ -229,9 +229,9 @@
     <resources>
         <image name="BG2.png" width="640" height="960"/>
         <image name="bubble.png" width="280" height="280"/>
-        <image name="first" width="16" height="16"/>
+        <image name="first.png" width="30" height="30"/>
         <image name="refresh_button.png" width="52" height="52"/>
-        <image name="second" width="16" height="16"/>
+        <image name="second.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="SM3DARMapView" superclassName="MKMapView">
