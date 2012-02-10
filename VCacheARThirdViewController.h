@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCacheARThirdViewController : UIViewController
+@interface VCacheARThirdViewController : UIViewController <UIAlertViewDelegate> 
+{
+    
+}
 
 
 @property (retain, nonatomic) IBOutlet UITextField *textFieldEnterName;

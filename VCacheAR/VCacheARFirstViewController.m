@@ -184,7 +184,7 @@
     
     labelPlayerName.text = playerNameTextField.text;
     [playerNameTextField resignFirstResponder];
-    [self saveString:playerNameTextField.text];
+    //[self saveString:playerNameTextField.text];
 }
 
 - (IBAction)informationButton:(id)sender {

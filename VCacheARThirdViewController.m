@@ -77,11 +77,15 @@
 
     [textFieldEnterName resignFirstResponder];
     [self saveString:textFieldEnterName.text];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Name confirmation" message:@"Once you have entered your name, it cannot be changed.  Are you sure you want X to be your name?" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"No", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Name confirmation" message:@"Once you have entered your name, it cannot be changed.  Are you sure you want X to be your name?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
                         
                         [alert show];
+    
+    
 
 }
 
-
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog([NSString stringWithFormat: @"%d", buttonIndex]);
+}
 @end
