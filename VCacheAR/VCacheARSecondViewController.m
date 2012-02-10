@@ -116,8 +116,9 @@
         
         NSString *Latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
         NSString *Longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
+        NSString *Name = [NSString stringWithFormat:@"DORK"];
         NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
-        NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
+        NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Name=%@&Latitude=%@&Longitude=%@", Uid, Name, Latitude, Longitude];
         [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
         [NSThread sleepForTimeInterval:5.0];
     }
