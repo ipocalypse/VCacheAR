@@ -45,6 +45,7 @@
 		866CC9C314DB666100C02C2E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC9C214DB666100C02C2E /* OpenGLES.framework */; };
 		866CC9C514DB666E00C02C2E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC9C414DB666E00C02C2E /* QuartzCore.framework */; };
 		866CC9CB14DBA6CA00C02C2E /* refresh_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CC9CA14DBA6CA00C02C2E /* refresh_button.png */; };
+		86DADA4314E598AB00DB419F /* VCacheARThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DADA4214E598AB00DB419F /* VCacheARThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,8 @@
 		866CC9C214DB666100C02C2E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		866CC9C414DB666E00C02C2E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		866CC9CA14DBA6CA00C02C2E /* refresh_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_button.png; sourceTree = "<group>"; };
+		86DADA4114E598AB00DB419F /* VCacheARThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCacheARThirdViewController.h; sourceTree = SOURCE_ROOT; };
+		86DADA4214E598AB00DB419F /* VCacheARThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCacheARThirdViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				866CC97F14DB444000C02C2E /* VCacheARSecondViewController.m */,
 				866CC98114DB444000C02C2E /* second.png */,
 				866CC98314DB444000C02C2E /* second@2x.png */,
+				86DADA4114E598AB00DB419F /* VCacheARThirdViewController.h */,
+				86DADA4214E598AB00DB419F /* VCacheARThirdViewController.m */,
 				866CC96914DB444000C02C2E /* Supporting Files */,
 			);
 			path = VCacheAR;
@@ -319,6 +324,7 @@
 				866CC97314DB444000C02C2E /* VCacheARAppDelegate.m in Sources */,
 				866CC97914DB444000C02C2E /* VCacheARFirstViewController.m in Sources */,
 				866CC98014DB444000C02C2E /* VCacheARSecondViewController.m in Sources */,
+				86DADA4314E598AB00DB419F /* VCacheARThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
