@@ -194,7 +194,7 @@
         [mapView addAnnotation:poi];
     }
     
-    UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"refresh_button.png"]] autorelease];
+    UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://grif.tv/images/radio-on.png"]]]] autorelease];
     
     CLLocationDegrees latitude = mapView.sm3dar.userLocation.coordinate.latitude + 0.1;
     CLLocationDegrees longitude = mapView.sm3dar.userLocation.coordinate.longitude;
