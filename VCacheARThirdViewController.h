@@ -15,6 +15,8 @@
 
 
 @property (retain, nonatomic) IBOutlet UITextField *textFieldEnterName;
+@property (retain, nonatomic) IBOutlet UIButton *buttonNameSubmitOutlet;
+@property (retain, nonatomic) IBOutlet UILabel *labelName;
 
 - (IBAction)buttonNameSubmit:(id)sender;
 
