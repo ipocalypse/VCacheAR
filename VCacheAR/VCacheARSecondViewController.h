@@ -17,7 +17,7 @@
     BOOL sm3darInitialized;
     CLLocationManager *locationManager;
     IBOutlet SM3DARMapView *mapView;
-    
+    SM3DARPointOfInterest *northStar;
     
     CLLocationAccuracy desiredLocationAccuracy;
     NSInteger desiredLocationAccuracyAttempts;

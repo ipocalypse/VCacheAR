@@ -166,36 +166,54 @@
         
         CLLocation *Location = [[CLLocation alloc] initWithLatitude:corde.latitude longitude:corde.longitude];
         
-           SM3DARPointOfInterest *poi = [[SM3DARPointOfInterest alloc] initWithLocation:Location 
-                                                                                title:Name
-                                                                                subtitle:nil
-                                                                                    url:nil
-                                                                             properties:nil];
+        SM3DARPointOfInterest *poi = [[SM3DARPointOfInterest alloc] initWithLocation:Location 
+                                                                               title:Name
+                                                                            subtitle:nil
+                                                                                 url:nil
+                                                                          properties:nil];
         
         
         // With 3D pointers
         
         //SM3DARTexturedGeometryView *modelView = [[SM3DARTexturedGeometryView alloc] initWithOBJ:@"star.obj" textureNamed:nil];
-       // SM3DARTexturedGeometryView *model2View = [[SM3DARTexturedGeometryView alloc] initWithOBJ:@"star.obj" textureNamed:nil];
+        // SM3DARTexturedGeometryView *model2View = [[SM3DARTexturedGeometryView alloc] initWithOBJ:@"star.obj" textureNamed:nil];
         
-       // SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[mapView.sm3dar addPointAtLatitude:corde.latitude
-       //                                                                                longitude:corde.longitude
-       //                                                                                 altitude:0
-       //                                                                                    title:Name
-         //                                                                                   view:modelView];
+        // SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[mapView.sm3dar addPointAtLatitude:corde.latitude
+        //                                                                                longitude:corde.longitude
+        //                                                                                 altitude:0
+        //                                                                                    title:Name
+        //                                                                                   view:modelView];
         //
         //
         //SM3DARPointOfInterest *poi2 = (SM3DARPointOfInterest *)[mapView.sm3dar addPointAtLatitude:corde.latitude + 0.0002
-          //                                                                              longitude:corde.longitude + 0.0002
-            //                                                                             altitude:0
-              //                                                                              title:nil
-                //                                                                             view:model2View];
+        //                                                                              longitude:corde.longitude + 0.0002
+        //                                                                             altitude:0
+        //                                                                              title:nil
+        //                                                                             view:model2View];
         //[mapView addAnnotation:poi2];
         [mapView addAnnotation:poi];
     }
     
+    UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"refresh_button.png"]] autorelease];
+    
+    CLLocationDegrees latitude = mapView.sm3dar.userLocation.coordinate.latitude + 0.1;
+    CLLocationDegrees longitude = mapView.sm3dar.userLocation.coordinate.longitude;
+    
+    
+    // NOTE: poi is autoreleased
+    
+    northStar = (SM3DARPointOfInterest*)[[mapView.sm3dar addPointAtLatitude:latitude
+                                                                  longitude:longitude
+                                                                   altitude:3000.0 
+                                                                      title:@"Polaris" 
+                                                                       view:star] retain];
+    
+    northStar.canReceiveFocus = NO;
+    
+    // 3DAR bug: addPointAtLatitude:longitude:altitude:title:view should add the point, not just init it.  Doh!
+    [mapView.sm3dar addPoint:northStar];
+    
 }
-
 
 - (void)viewDidUnload
 {
