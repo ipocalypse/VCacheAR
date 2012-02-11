@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 #define IpocQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) 
-#define IpocURL [NSURL URLWithString: @"http://www.grif.tv/json.php"] 
+#define IpocURL [NSURL URLWithString: @"http://www.grif.tv/post.php"] 
 #import <MapKit/MapKit.h>
 #import "VCacheARSecondViewController.h"
 
@@ -150,9 +150,9 @@
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData 
                                                          options:kNilOptions 
                                                            error:&error];
-    NSArray* locations = [json objectForKey:@"location"]; 
+    NSArray* locations = [json objectForKey:@"posts"]; 
     
-    NSLog(@"location: %@", locations); 
+    NSLog(@"posts: %@", locations); 
     
     CLLocationCoordinate2D corde;
     //Place User locations on Map and in 3DAR with UID
@@ -161,16 +161,36 @@
         corde.latitude = [[[locations objectAtIndex:i] valueForKey:@"Latitude"]floatValue];
         corde.longitude = [[[locations objectAtIndex:i] valueForKey:@"Longitude"]floatValue];
         NSString *Name = [[locations valueForKey:@"Name"]objectAtIndex:i];
+        NSString *Image = [[locations valueForKey:@"Image"]objectAtIndex:i];
+        
+        // With custom images
+        
+        UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:Image]]]] autorelease];
+        
+        
+        
+        POST = (SM3DARPointOfInterest*)[[mapView.sm3dar addPointAtLatitude:corde.latitude
+                                                                      longitude:corde.longitude
+                                                                       altitude:0
+                                                                          title:Name
+                                                                           view:star] retain];
+        
+        // 3DAR bug: addPointAtLatitude:longitude:altitude:title:view should add the point, not just init it.  Doh!
+        [mapView addAnnotation:POST];   
+        
+        
+        
+        
         
         // with 2D pointers
         
-        CLLocation *Location = [[CLLocation alloc] initWithLatitude:corde.latitude longitude:corde.longitude];
+       // CLLocation *Location = [[CLLocation alloc] initWithLatitude:corde.latitude longitude:corde.longitude];
         
-        SM3DARPointOfInterest *poi = [[SM3DARPointOfInterest alloc] initWithLocation:Location 
-                                                                               title:Name
-                                                                            subtitle:nil
-                                                                                 url:nil
-                                                                          properties:nil];
+       // SM3DARPointOfInterest *poi = [[SM3DARPointOfInterest alloc] initWithLocation:Location 
+         //                                                                      title:Name
+           //                                                                 subtitle:nil
+             //                                                                    url:nil
+               //                                                           properties:nil];
         
         
         // With 3D pointers
@@ -191,27 +211,8 @@
         //                                                                              title:nil
         //                                                                             view:model2View];
         //[mapView addAnnotation:poi2];
-        [mapView addAnnotation:poi];
+        //[mapView addAnnotation:poi];
     }
-    
-    UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://grif.tv/images/radio-on.png"]]]] autorelease];
-    
-    CLLocationDegrees latitude = mapView.sm3dar.userLocation.coordinate.latitude + 0.1;
-    CLLocationDegrees longitude = mapView.sm3dar.userLocation.coordinate.longitude;
-    
-    
-    // NOTE: poi is autoreleased
-    
-    northStar = (SM3DARPointOfInterest*)[[mapView.sm3dar addPointAtLatitude:latitude
-                                                                  longitude:longitude
-                                                                   altitude:3000.0 
-                                                                      title:@"Polaris" 
-                                                                       view:star] retain];
-    
-    northStar.canReceiveFocus = NO;
-    
-    // 3DAR bug: addPointAtLatitude:longitude:altitude:title:view should add the point, not just init it.  Doh!
-    [mapView.sm3dar addPoint:northStar];
     
 }
 
