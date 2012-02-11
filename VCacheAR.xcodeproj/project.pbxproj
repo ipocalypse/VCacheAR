@@ -11,6 +11,7 @@
 		4CF173E214E4F495003AA1D7 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF173E114E4F495003AA1D7 /* button1.png */; };
 		4CF173E414E4F608003AA1D7 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF173E314E4F608003AA1D7 /* button2.png */; };
 		866B918214E5F90C007EDC34 /* lib3DAR_v2_1_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B918114E5F90C007EDC34 /* lib3DAR_v2_1_3.a */; };
+		866B918814E63FA7007EDC34 /* 496a943995.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B918714E63FA7007EDC34 /* 496a943995.png */; };
 		866CC96314DB444000C02C2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC96214DB444000C02C2E /* UIKit.framework */; };
 		866CC96514DB444000C02C2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC96414DB444000C02C2E /* Foundation.framework */; };
 		866CC96714DB444000C02C2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866CC96614DB444000C02C2E /* CoreGraphics.framework */; };
@@ -53,6 +54,7 @@
 		4CF173E114E4F495003AA1D7 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
 		4CF173E314E4F608003AA1D7 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
 		866B918114E5F90C007EDC34 /* lib3DAR_v2_1_3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = lib3DAR_v2_1_3.a; sourceTree = "<group>"; };
+		866B918714E63FA7007EDC34 /* 496a943995.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 496a943995.png; sourceTree = "<group>"; };
 		866CC95E14DB444000C02C2E /* VCacheAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCacheAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866CC96214DB444000C02C2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		866CC96414DB444000C02C2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -178,6 +180,7 @@
 				4CF173DF14E4F0DE003AA1D7 /* BG2.png */,
 				4CF173E114E4F495003AA1D7 /* button1.png */,
 				4CF173E314E4F608003AA1D7 /* button2.png */,
+				866B918714E63FA7007EDC34 /* 496a943995.png */,
 				866CC9CA14DBA6CA00C02C2E /* refresh_button.png */,
 				866CC96A14DB444000C02C2E /* VCacheAR-Info.plist */,
 				866CC96B14DB444000C02C2E /* InfoPlist.strings */,
@@ -310,6 +313,7 @@
 				4CF173E014E4F0DE003AA1D7 /* BG2.png in Resources */,
 				4CF173E214E4F495003AA1D7 /* button1.png in Resources */,
 				4CF173E414E4F608003AA1D7 /* button2.png in Resources */,
+				866B918814E63FA7007EDC34 /* 496a943995.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

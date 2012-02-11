@@ -165,8 +165,9 @@
         
         // With custom images
         
-        UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:Image]]]] autorelease];
-        
+      UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:Image]]]] autorelease];
+
+       // UIImageView *star = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"496a943995.png"]] autorelease];
         
         
         POST = (SM3DARPointOfInterest*)[[mapView.sm3dar addPointAtLatitude:corde.latitude
