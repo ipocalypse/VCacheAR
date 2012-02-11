@@ -97,9 +97,10 @@
     if (buttonIndex == 0)
     {
         [self saveString:textFieldEnterName.text];
-        labelName.hidden = YES;
+        labelName.hidden = NO;
         buttonNameSubmitOutlet.userInteractionEnabled = NO;
         textFieldEnterName.userInteractionEnabled = NO;
+        
         
     }
     
